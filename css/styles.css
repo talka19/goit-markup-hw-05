@@ -226,6 +226,7 @@ text-transform: uppercase;
 
   .backdrop {
    position: fixed;
+
    top: 0;
    left: 0;
    width: 100%;
@@ -239,7 +240,10 @@ text-transform: uppercase;
   .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
-    visibility: hidden;
+  }
+
+  .no-scroll {
+    overflow: hidden;
   }
 
   .backdrop.is-hidden .modal{
@@ -248,6 +252,7 @@ text-transform: uppercase;
 
   .modal {
     position: absolute;
+
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%) scale(1);
@@ -273,6 +278,9 @@ text-transform: uppercase;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition-duration: 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .close-modal:hover {
@@ -393,8 +401,10 @@ text-transform: uppercase;
     height: 70px;
     color: #FFFFFF;
     text-transform: uppercase;
+    font-weight: 700;
     letter-spacing: 0.03em;
     font-size: 14px;
+    line-height: 16px;
     background: rgba(47, 48, 58, 0.8);
   }
 
