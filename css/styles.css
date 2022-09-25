@@ -99,6 +99,7 @@ border-bottom: 1px solid #ECECEC;
 
 .site-nav .link {
   display: block;
+  color: var(--primary-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
   line-height: 1.14;
@@ -108,9 +109,9 @@ border-bottom: 1px solid #ECECEC;
   fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav .link:visited {
+/* .site-nav .link:visited {
   color: var(--primary-text-color);
-}
+} */
 .site-nav .link.current {
   position: relative;
   display: block;
@@ -234,17 +235,19 @@ text-transform: uppercase;
    background-color: rgba(0, 0, 0, 0.2);
 
    opacity: 1;
-   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+               visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
   }
 
-  .no-scroll {
+  /* .no-scroll {
     overflow: hidden;
-  }
+  } */
 
   .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(0.9);
